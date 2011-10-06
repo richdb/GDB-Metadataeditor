@@ -1,0 +1,45 @@
+﻿    <tpc:DownloadSelectorButton right="500" top="6" listento="downloadSelectorWindow">
+      <string id="tooltip" en="open DDE download window" nl="open DDE download scherm"/>
+    </tpc:DownloadSelectorButton>	
+    <fmc:Window id="downloadSelectorWindow" skin="g" top="100" left="100" width="500" height="500" canresize="true" canclose="true" visible="false">
+        <string id="title" en="Download Selector" nl="Downloadkiezer"/>
+        <!--tpc:DownloadSelector id="downloadSelector" top="10" left="10" right="right -10" bottom="bottom -10" listento="map,downloadSelectorWindow,legend" ddeservleturl="http://idgisvv.xs4all.nl/DDEDownload/flamingo"-->
+        <tpc:DownloadSelector id="downloadSelector" top="10" left="10" right="right -10" bottom="bottom -10" listento="map,downloadSelectorWindow,legend" ddeservleturl="http://www.drenthe.info/kaarten/DDEDownload/flamingo" debug="true">
+        	<tpc:DownloadLegend id="downloadLegend"/>
+          <tpc:crs label="Lat/Long" data="LL84"/>
+          <tpc:crs label="Rijksdriehoek" data="EPSG:28992"/>
+          <tpc:crs label="Belgie Lambert 72" data="EPSG:31370"/>
+          <tpc:outputFormat label="AutoCAD DXF Rel 12" data="2dxf12.fme"/>
+		  <tpc:outputFormat label="AutoCAD DXF Rel 14" data="2dxf14.fme"/>
+		  <tpc:outputFormat label="AutoCAD DXF 2000" data="2dxf2000.fme"/>
+		  <tpc:outputFormat label="AutoCAD DWG Rel 12" data="2dwg12.fme"/>
+		  <tpc:outputFormat label="AutoCAD DWG Rel 14" data="2dwg14.fme"/>
+		  <tpc:outputFormat label="AutoCAD DWG 2000" data="2dwg2000.fme"/>
+		  <tpc:outputFormat label="ARC/INFO E00 Archive files" data="2e00.fme"/>
+		  <tpc:outputFormat label="Encapsulated PostScript (EPS)" data="2eps.fme"/>
+		  <tpc:outputFormat label="ESRI GML" data="2esriGML.fme"/>
+		  <tpc:outputFormat label="GML 2 (Safe Schema)" data="2gml2.fme"/>
+		  <tpc:outputFormat label="Illustrator Encapsulated PostScript (EPS)" data="2ieps.fme"/>
+		  <tpc:outputFormat label="MicroStation V7 Design Files (DGN)" data="2igdsV7.fme"/>
+		  <tpc:outputFormat label="MicroStation V8 Design Files (DGN)" data="2igdsV8.fme"/>
+		  <tpc:outputFormat label="MapInfo TAB (Native)" data="2mapinfo.fme"/>
+		  <tpc:outputFormat label="MapInfo MID/MIF" data="2mif.fme"/>		  		  
+          <tpc:outputFormat label="ESRI Shape files" data="2shp.fme"/>          
+          <tpc:inArea label="Borsele" coords="37463+378598+53626+378598+53626+391728+37463+391728+37463+378598"/>
+          <tpc:inArea label="Goes" coords="38244+388821+56760+388821+56760+397307+38244+397307+38244+388821"/>
+          <tpc:inArea label="Hulst" coords="55018+362197+74859+362197+74859+380617+55018+380617+55018+362197"/>
+          <string id="layers" en="Layers" nl="Kaartlagen"/>
+          <string id="inArea" en="Within Area" nl="Binnen gebied"/>
+          <string id="inGeometry" en="Within Geometry" nl="Binnen geometrie"/>
+          <string id="inBox" en="Within Box" nl="Binnen rechthoek"/>
+          <string id="inAll" en="Whole file" nl="Gehele bestand"/>
+          <string id="crs" en="Coord. Ref. System" nl="Coordinaatstelsel"/>
+          <string id="format" en="File Format" nl="Bestandsformaat"/>
+          <string id="emailAddress" en="Email Download To" nl="Download e-mailen naar"/>
+          <string id="warningNoLayer" en="Please select a layer" nl="Selecteer eerst een laag"/>
+          <string id="warningNoEmail" en="Please fill in a valid e-mail adress" nl="Vul een geldig e-mail adres in"/>
+          <string id="warningOutOfExtent" en="Requested extent outside the fullextent of the map" nl="Ingevulde coördinaten vallen buiten bereik van de kaart"/>
+          <string id="warningErrorInBox" en="Error in box coördinates" nl="Fouten in coördinaten van rechthoek"/>
+          <string id="extentButtonLabel" en="from map" nl="van kaart"/>
+        </tpc:DownloadSelector>
+    </fmc:Window>
